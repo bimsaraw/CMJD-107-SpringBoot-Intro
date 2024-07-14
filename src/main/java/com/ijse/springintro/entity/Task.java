@@ -2,6 +2,7 @@ package com.ijse.springintro.entity;
 
 import java.time.LocalDateTime;
 
+import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -22,9 +23,11 @@ public class Task {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
+    @Column(nullable = false)
     private String taskName;
 
-    private Integer priorty;
+    @Column(nullable = false)
+    private Integer priority;
 
     private LocalDateTime dueDate;
     
