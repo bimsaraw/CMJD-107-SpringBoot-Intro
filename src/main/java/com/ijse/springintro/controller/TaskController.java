@@ -62,7 +62,7 @@ public class TaskController {
 
     @PutMapping("/tasks/{taskId}")
     public ResponseEntity<Task> updateTask(@PathVariable Long taskId, @RequestBody Task task) {
-        Task updatedTask = taskService.updateTask(taskId, task);
+        Task updatedTask = taskService.updateTask(taskId, task); 
 
         if(updatedTask== null) {
             return ResponseEntity.status(404).body(null);
