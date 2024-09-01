@@ -16,9 +16,4 @@ public class HelloController {
     public String createHello() {
         return "POST Request to hello endpoint";
     }
-
-    @GetMapping("/orders")
-    public String showOrders() {
-        return "Showing Orders";
-    }
 }
